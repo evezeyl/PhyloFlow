@@ -13,9 +13,11 @@ followed by Panaroo QC and Panaroo pan-genome [2]. Then, duplicated genomes are 
 Then, a maximum likelihood (ML) tree is generated with IQTree [4], and SNP distances calculated with snp-dists [5].
 
 ### ASSEMBLY
-In this track, the core genome is identified using ParSNP [6]. Then, duplicated genomes are removed with seqkit (optional).
+In this track, a multiple sequence alignment of the core genome (defined as alignable sequences in all genomes under study) is preformed using ParSNP [6]. Then, eventual duplicated genomes are removed with seqkit (optional)*.
 Then, recombinant areas are identified with Gubbins [7], and masked with maskrc-svg [8] before the ML tree is generated 
 with IQTree, and SNP-distances calculated with snp-dists. 
+
+_*duplicated genomes may occur when the differences between those genomes are found outside sequence fragments fragmenets that were aligned_
 
 ### READS
 In this track, the core genome is generated through Snippy [9], which use reads
